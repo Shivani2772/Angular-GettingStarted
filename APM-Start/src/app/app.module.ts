@@ -8,6 +8,7 @@ import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { StarComponent } from './shared/star.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
+import { LeftNavComponent } from './shared/left-nav/left-nav.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,13 @@ import { DropdownComponent } from './shared/dropdown/dropdown.component';
     ProductListComponent,
     ConvertToSpacesPipe,
     StarComponent,
-    DropdownComponent
+    DropdownComponent,
+    LeftNavComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    NgbModule
+    NgbModule,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,45 @@
+<p>
+    <button type="button"
+            class="btn btn-outline-primary"
+            (click)="collapse.toggle()"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseExample">
+        Toggle
+    </button>
+</p>
+<div #collapse="ngbCollapse"
+     [(ngbCollapse)]="isCollapsed">
+    <div class="card">
+        <div class="card-body">
+            You can collapse this card by clicking Toggle
+        </div>
+    </div>
+</div>
+
+
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <!-- Note: set the initial collapsed state and change it when clicking -->
+            <a ng-init="navCollapsed = true"
+               ng-click="navCollapsed = !navCollapsed"
+               class="btn btn-navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand"
+               href="#">Title</a>
+            <!-- Note: use "collapse" here. The original "data-" settings are not needed anymore. -->
+            <div collapse="navCollapsed"
+                 class="nav-collapse collapse navbar-responsive-collapse">
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
